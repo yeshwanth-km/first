@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - K M Yeshwanth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page" id="page1">
+        <header>
+            <h1>K M Yeshwanth</h1>
+        </header>
+        <section class="description">
+            <h2>Brief Description</h2>
+            <p>I have a degree in Computer Science and Engineering. Passionate about technology and eager to contribute to team success through hard work, attention to detail, and excellent organizational skills.</p>
+        </section>
+        <button onclick="showPage('page2')">Know More About Me</button>
+    </div>
+
+    <div class="page" id="page2">
+        <header>
+            <h1>Education Qualification</h1>
+        </header>
+        <section class="education">
+            <h2>My Education</h2>
+            <ul>
+                <li><strong>Degree:</strong> Computer Science and Engineering</li>
+                <li><strong>Institute:</strong> Siddaganga Institute of Technology</li>
+                <li><strong>CGPA:</strong> 7.3</li>
+                <li><strong>12th Standard:</strong> Narayana Jr College</li>
+                <li><strong>CGPA:</strong> 7.3</li>
+                <li><strong>10th Standard:</strong> Sri Chaitanya Techno School</li>
+                <li><strong>CGPA:</strong> 9.3</li>
+            </ul>
+        </section>
+        <button onclick="showPage('page3')">Know About My Projects</button>
+    </div>
+
+    <div class="page" id="page3">
+        <header>
+            <h1>Projects</h1>
+        </header>
+        <section class="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li><strong>Title:</strong> Crescendo Connect</li>
+                <li><strong>Description:</strong> Online learning platform to learn arts like singing, dance, and drama.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // Show the first page by default
+        showPage('page1');
+    </script>
+</body>
+</html>
